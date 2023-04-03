@@ -16,7 +16,6 @@ mock==5.0.1
 npm==0.1.1
 numpy==1.24.2
 oauthlib==3.2.2
-optional-django==0.1.0
 pandas==1.5.3
 Pillow==9.4.0
 pycparser==2.21
