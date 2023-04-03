@@ -8,9 +8,14 @@ function PhURL() {
   const [classicUrl, setUrlCLassic] = useState("");
   const [classicResult, setResultClassic] = useState("");
 
+  const isProduction = process.env.NODE_ENV === 'production';
+  const apiUrl = isProduction
+      ? '/api/upload_file/'
+      : 'http://localhost:8000/api/upload_file/';
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8000/phishingweb/predict/", { url: url }).then((response) => {
+    axios.post(apiUrl + "phishingweb/predict/", { url: url }).then((response) => {
       setResult(response.data.result);
       setProbability(response.data.probability);
     });
@@ -18,7 +23,7 @@ function PhURL() {
 
   const handleSubmitClassic = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8000/phishingweb/check_phishing/", { url: classicUrl }).then((response) => {
+    axios.post(apiUrl + "phishingweb/check_phishing/", { url: classicUrl }).then((response) => {
       setResultClassic(response.data.result);
     });
   };
