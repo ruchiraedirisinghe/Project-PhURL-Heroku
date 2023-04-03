@@ -13,7 +13,6 @@ lightgbm==3.3.5
 MarkupSafe==2.1.2
 matplotlib==3.7.1
 mock==5.0.1
-npm==0.1.1
 numpy==1.24.2
 oauthlib==3.2.2
 pandas==1.5.3
@@ -21,7 +20,6 @@ Pillow==9.4.0
 pycparser==2.21
 pyparsing==3.0.9
 python-dateutil==2.8.2
-react==4.3.0
 requests==2.25.1
 scikit-learn==1.2.2
 seaborn==0.12.2
