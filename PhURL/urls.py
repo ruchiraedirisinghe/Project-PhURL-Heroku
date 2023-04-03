@@ -18,11 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from phishingweb import views
+from django.contrib.staticfiles.views import serve
+from django.conf import settings
+from django.conf.urls.static import static
 
 # A list of URL patterns.
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('phishingweb/predict/', views.predict, name='predict'),
-    path('', TemplateView.as_view(template_name="index.html")),
+    # path('', TemplateView.as_view(template_name="index.html")),
     path('phishingweb/check_phishing/', views.predict, name='check_phishing'),
-]
+    path('', serve, kwargs={'path': 'index.html'}),
+    path('<path:path>', serve),
+    path('', include('phishingweb.urls')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
