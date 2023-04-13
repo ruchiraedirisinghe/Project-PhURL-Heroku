@@ -130,7 +130,8 @@ analysis is not foolproof and there is a chance that
 
         <br></br><img src="/whatis.png" alt="Tech Image" width="1050" height="370" />
         <br></br><img src="/how.png" alt="Tech Image" width="1050" height="385" />
-        <br></br><br></br><br></br><br></br><img src="/emaildetect.png" alt="Tech Image" width="1050" height="1300" />
+        <br></br><br></br><br></br><br></br><img src="/emaildetect.png" alt="Tech Image" width="790" height="980" />
+        <br></br><br></br><img src="/common.png" alt="Tech Image" width="1050" height="835" />
     </div>
   );
 }
