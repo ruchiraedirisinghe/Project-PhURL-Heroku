@@ -39,7 +39,7 @@ function PhURL() {
 
     <div style={{ backgroundColor: '#020B1B' }}>
       <img src="/logo512.png" alt="Tech Image" width="150" height="150" /><br></br>
-      
+
       {/* Introduction to PhURL */}
       <img src="/sectionz.png" alt="Tech Image" width="930" height="250" />
       <br></br>
@@ -63,40 +63,43 @@ function PhURL() {
 
 
       <br></br><br></br>
-      
-      
+
+
       {/* PhURL Advanced URL Detection*/}
       <img src="/advancedsection.png" alt="Tech Image" width="1050" height="330" />
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="url"><h3 style={{ color: '#fff' }}>Enter Your Suspicious URL Here: </h3> </label>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <label htmlFor="url" style={{ color: '#fff', marginBottom: '10px', fontSize: '18px', fontWeight: 'bold' }}>Enter Your Suspicious URL Here:</label>
         <input
           type="text"
           id="url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
+          style={{ padding: '10px', borderRadius: '5px', border: 'none', boxShadow: '0px 0px 5px 1px #007bff', width: '300px' }}
+          placeholder="https://example.com"
         />
-        <button type="submit">Predict</button>
+        <button type="submit" style={{ backgroundColor: '#8566FF', color: '#010000', padding: '10px', borderRadius: '5px', border: 'none', marginTop: '10px', cursor: 'pointer', fontWeight: 'bold', fontSize: '18px' }}>Is it Phishing?</button>
       </form>
+
       {result && (
         <div>
-        {/* <h2 style={{ color: '#fff' }}>Result: {result}</h2> */}
-        {/* <h2 style={{ color: {{result === 'MALWARE' ? 'red' : 'green'}} }}>Result: {result}</h2> */}
-        <h2 style={{ color: result === 'MALWARE' ? 'red' : 'green' }}>Result: {result}</h2>
-        <div style={{ maxWidth: '750px', margin: '0 auto' }}>
-        <p style={{ color: '#fff' }}>Probability:</p>
-        <div style={{ height: '20px', width: '100%', backgroundColor: '#ddd', borderRadius: '10px', marginTop: '10px' }}>
-          <div style={{ height: '20px', width: `${probability > 100 ? 100 : probability}%`, backgroundColor: result === 'MALWARE' ? 'red' : 'green', borderRadius: '10px' }}>
-            {probability > 100 ? (
-              <>
-                <div style={{ height: '20px', width: `${probability - 100}%`, backgroundColor: result === 'MALWARE' ? 'red' : 'green', borderRadius: '10px' }} />
-                <span style={{ color: '#fff', fontSize: '14px', fontWeight: 'bold', marginLeft: '5px' }}>100%</span>
-              </>
-            ) : (
-              <span style={{ color: '#fff', fontSize: '14px', fontWeight: 'bold', marginLeft: '5px' }}>{probability}</span>
-            )}
+          {/* <h2 style={{ color: '#fff' }}>Result: {result}</h2> */}
+          {/* <h2 style={{ color: {{result === 'MALWARE' ? 'red' : 'green'}} }}>Result: {result}</h2> */}
+          <h2 style={{ color: result === 'MALWARE' ? 'red' : 'green' }}>Result: {result}</h2>
+          <div style={{ maxWidth: '750px', margin: '0 auto' }}>
+            <p style={{ color: '#fff' }}>Probability:</p>
+            <div style={{ height: '20px', width: '100%', backgroundColor: '#ddd', borderRadius: '10px', marginTop: '10px' }}>
+              <div style={{ height: '20px', width: `${probability > 100 ? 100 : probability}%`, backgroundColor: result === 'MALWARE' ? 'red' : 'green', borderRadius: '10px' }}>
+                {probability > 100 ? (
+                  <>
+                    <div style={{ height: '20px', width: `${probability - 100}%`, backgroundColor: result === 'MALWARE' ? 'red' : 'green', borderRadius: '10px' }} />
+                    <span style={{ color: '#fff', fontSize: '14px', fontWeight: 'bold', marginLeft: '5px' }}>100%</span>
+                  </>
+                ) : (
+                  <span style={{ color: '#fff', fontSize: '14px', fontWeight: 'bold', marginLeft: '5px' }}>{probability}</span>
+                )}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
           <p style={{ color: '#fff' }}>When you enter a link to a website, our system analyzes the URL to determine whether it
             contains malware or not. The probability displayed to you indicates
             <br></br> the likelihood that the URL is malicious or safe to be browsed and used. However, please keep in mind that this
@@ -114,15 +117,17 @@ function PhURL() {
       {/*PhURL Classic URL Detection*/}
       <img src="/classicsection.png" alt="Tech Image" width="1050" height="350" />
       <br></br><br></br>
-      <form onSubmit={handleSubmitClassic}>
-        <label htmlFor="classicUrl"><h3 style={{ color: '#fff' }}>Enter Your Suspicious URL Here:</h3>  </label>
+      <form onSubmit={handleSubmitClassic} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <label htmlFor="classicUrl" style={{ color: '#fff', marginBottom: '10px', fontSize: '18px', fontWeight: 'bold' }}>Enter Your Suspicious URL Here:</label>
         <input
           type="text"
           id="classicUrl"
           value={classicUrl}
           onChange={(e) => setUrlCLassic(e.target.value)}
+          style={{ padding: '10px', borderRadius: '5px', border: 'none', boxShadow: '0px 0px 5px 1px #007bff', width: '300px' }}
+          placeholder="https://example.com"
         />
-        <button type="submit">Predict</button>
+        <button type="submit" style={{ backgroundColor: '#8566FF', color: '#010000', padding: '10px', borderRadius: '5px', border: 'none', marginTop: '10px', cursor: 'pointer', fontWeight: 'bold', fontSize: '18px' }}>Is it Phishing?</button>
       </form>
       {classicResult && (
         <div>
