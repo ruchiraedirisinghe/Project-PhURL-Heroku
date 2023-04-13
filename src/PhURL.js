@@ -41,7 +41,7 @@ function PhURL() {
       <img src="/logo512.png" alt="Tech Image" width="150" height="150" /><br></br>
       
       {/* Introduction to PhURL */}
-      <img src="/first section.png" alt="Tech Image" width="930" height="250" />
+      <img src="/sectionz.png" alt="Tech Image" width="930" height="250" />
       <br></br>
       <h2 style={{ color: '#fff' }}>What is PhURL?</h2>
       <p style={{ color: '#fff' }}>Phishing attacks are a significant threat to internet users, with cyber criminals using increasingly sophisticated tactics to trick people into revealing sensitive information
