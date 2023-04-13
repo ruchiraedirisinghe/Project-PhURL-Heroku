@@ -67,7 +67,7 @@ function PhURL() {
 
       {/* PhURL Advanced URL Detection*/}
       <img src="/advancedsection.png" alt="Tech Image" width="1050" height="330" />
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <label htmlFor="url" style={{ color: '#fff', marginBottom: '10px', fontSize: '18px', fontWeight: 'bold' }}>Enter Your Suspicious URL Here:</label>
         <input
           type="text"
