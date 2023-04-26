@@ -5,8 +5,8 @@ function PhURL() {
   const [url, setUrl] = useState("");
   const [result, setResult] = useState("");
   const [probability, setProbability] = useState("");
-  const [classicUrl, setUrlCLassic] = useState("");
-  const [classicResult, setResultClassic] = useState("");
+  // const [classicUrl, setUrlCLassic] = useState("");
+  // const [classicResult, setResultClassic] = useState("");
 
   const isProduction = process.env.NODE_ENV === 'production';
   const apiUrl = isProduction
@@ -21,12 +21,12 @@ function PhURL() {
     });
   }; // added closing parenthesis here
 
-  const handleSubmitClassic = (e) => {
-    e.preventDefault();
-    axios.post(apiUrl + "check_phishing/", { url: classicUrl }).then((response) => {
-      setResultClassic(response.data.result);
-    });
-  };
+  // const handleSubmitClassic = (e) => {
+  //   e.preventDefault();
+  //   axios.post(apiUrl + "check_phishing/", { url: classicUrl }).then((response) => {
+  //     setResultClassic(response.data.result);
+  //   });
+  // };
   /* The above code is a React component that renders a webpage for a phishing URL detection and learning
   platform called PhURL. The webpage includes information about the platform, its features, and
   technologies used in its development. It also includes two forms for users to enter suspicious URLs
@@ -42,24 +42,9 @@ function PhURL() {
 
       {/* Introduction to PhURL */}
       <img src="/sectionz.png" alt="Tech Image" width="930" height="250" />
-      <br></br>
-      <h2 style={{ color: '#fff' }}>What is PhURL?</h2>
-      <p style={{ color: '#fff' }}>Phishing attacks are a significant threat to internet users, with cyber criminals using increasingly sophisticated tactics to trick people into revealing sensitive information
-        <br></br> or downloading malware. This project aims to protect individuals and organizations from these threats by developing a system that can detect phishing URLs and educate
-        <br></br>users about how to recognize and avoid them. As phishing attacks are constantly evolving, a learning platform that can adapt and improve its detection capabilities is essential
-        <br></br>for staying ahead of the threat. Additionally, the project also has the potential to contribute to our understanding of how phishing attacks work and
-        <br></br>how phishing attacks work and how they can be effectively detected and prevented.</p>
-
-      <br></br><h2 style={{ color: '#fff' }}>Why use PhURL?</h2>
-      <p style={{ color: '#fff' }}>PhURL uses multiple URL detection methods to increase accuracy and adapt to evolving phishing tactics, providing more comprehensive protection against phishing attacks.
-        <br></br>With phishing attacks constantly evolving and becoming more sophisticated, PhURL is essential for staying ahead of the threat by providing a learning platform
-        <br></br>that can adapt and improve its detection capabilities over time. Not only is PhURL practical, but it also has the potential to contribute to our understanding of
-        <br></br> how phishing attacks work and how they can be effectively detected and prevented.</p><br></br>
-
-      <h2 style={{ color: '#fff' }}>Used Technologies in PhURL Development</h2>
-      <img src="/tech.png" alt="Tech Image" width="920" height="80" /><br></br>
       <br></br><br></br><br></br>
-      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br>
+
+      <img src="/Linebreak.png" alt="Line Break" width="1200" height="3" /><br></br>
 
 
       <br></br><br></br>
@@ -111,10 +96,10 @@ function PhURL() {
       <br></br><br></br>
       <img src="/advancework.png" alt="Tech Image" width="1050" height="908" /><br></br>
       <br></br><br></br>
-      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br><br></br><br></br>
+      <img src="/Linebreak.png" alt="Line Break" width="1200" height="3" /><br></br><br></br><br></br>
 
 
-      {/*PhURL Classic URL Detection*/}
+      {/* PhURL Classic URL Detection
       <img src="/classicsection.png" alt="Tech Image" width="1050" height="350" />
       <br></br><br></br>
       <form onSubmit={handleSubmitClassic} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -141,7 +126,7 @@ function PhURL() {
       <br></br><br></br>
       <img src="/classicwork.png" alt="Tech Image" width="1050" height="828" /><br></br>
       <br></br><br></br>
-      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br><br></br><br></br>
+      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br><br></br><br></br> */}
 
       {/*PhURL URL Detection - how does it work*/}
       <br></br><img src="/whatis.png" alt="Tech Image" width="1050" height="370" />
@@ -150,12 +135,12 @@ function PhURL() {
       <br></br><br></br><img src="/common.png" alt="Tech Image" width="1050" height="835" />
 
       <br></br><br></br>
-      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br><br></br><br></br>
+      <img src="/Linebreak.png" alt="Line Break" width="1200" height="3" /><br></br><br></br><br></br>
 
       <img src="/t&c.png" alt="Tech Image" width="1220" height="1100" />
 
       <br></br><br></br>
-      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br><br></br>
+      <img src="/Linebreak.png" alt="Line Break" width="1200" height="3" /><br></br><br></br>
 
       <h1 style={{ color: '#fff' }}>Please Enter Your Valuable Feedback</h1>
       <h3 style={{ color: '#fff' }}>PhURL is all about providing what is best for the users.
@@ -168,7 +153,25 @@ function PhURL() {
         </a>
       </div>
       <br></br><br></br>
-      <img src="/Linebreak.png" alt="Tech Image" width="1200" height="3" /><br></br><br></br><br></br>
+      <img src="/Linebreak.png" alt="Line Break" width="1200" height="3" /><br></br><br></br><br></br>
+
+      <h2 style={{ color: '#fff',  }}>What is PhURL?</h2>
+      <p style={{ color: '#fff' }}>Phishing attacks are a significant threat to internet users, with cyber criminals using increasingly sophisticated tactics to trick people into revealing sensitive information
+        <br></br> or downloading malware. This project aims to protect individuals and organizations from these threats by developing a system that can detect phishing URLs and educate
+        <br></br>users about how to recognize and avoid them. As phishing attacks are constantly evolving, a learning platform that can adapt and improve its detection capabilities is essential
+        <br></br>for staying ahead of the threat. Additionally, the project also has the potential to contribute to our understanding of how phishing attacks work and
+        <br></br>how phishing attacks work and how they can be effectively detected and prevented.</p>
+
+      <br></br><h2 style={{ color: '#fff' }}>Why use PhURL?</h2>
+      <p style={{ color: '#fff' }}>PhURL uses multiple URL detection methods to increase accuracy and adapt to evolving phishing tactics, providing more comprehensive protection against phishing attacks.
+        <br></br>With phishing attacks constantly evolving and becoming more sophisticated, PhURL is essential for staying ahead of the threat by providing a learning platform
+        <br></br>that can adapt and improve its detection capabilities over time. Not only is PhURL practical, but it also has the potential to contribute to our understanding of
+        <br></br> how phishing attacks work and how they can be effectively detected and prevented.</p><br></br>
+
+      <h2 style={{ color: '#fff' }}>Used Technologies in PhURL Development</h2>
+      <img src="/tech.png" alt="Tech Image" width="920" height="80" /><br></br>
+      <br></br><br></br><br></br>
+      <img src="/Linebreak.png" alt="Line Break" width="1200" height="3" /><br></br>
 
       <h1 style={{ color: '#fff' }}>Follow The Creator</h1>
 
